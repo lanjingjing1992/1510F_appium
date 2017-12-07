@@ -3,37 +3,7 @@ import unittest
 from review.Tool import BaseTestManager
 from review.Businness import businessAction
 from HTMLTestRunner.HTMLTestRunner import HTMLTestRunner
-# class Duodian(unittest.TestCase):
-#     def setUp(self):
-#         self.server=businessAction('com.wm.dmall.LaunchActivity', 'com.wm.dmall')
-#
-#     def testA_clickMe(self):
-#         '''点击我的'''
-#         self.server.ClickMe()
-#         '''点击登陆按钮'''
-#         self.server.ClickLoginbtn()
-#
-#         '''登陆'''
-#         self.server.Login()
-#     def testB_clickAbout(self):
-#         '''使用断言判断版本号'''
-#         self.server.ClickMe()
-#         self.server.ClickAbout()
-#         '''使用断言判断版本号'''
-#         self.assertEqual(self.server.Equal_version(),'当前版本：3.8.1')
-#         time.sleep(3)
-#
-#     def tearDown(self):
-#         '''退出'''
-#         self.server.clickToTeardown()
-# if __name__ == '__main__':
-#
-#       suite=unittest.TestSuite()
-#       suite.addTest(Duodian('testA_clickMe'))
-#       suite.addTest(Duodian('testB_clickAbout'))
-#       file=open('result.html','w+')
-#       runner=HTMLTestRunner(stream=file,title='兰京京',description='这是我的测试报告1510F')
-#       runner.run(suite)
+
 
 
 class Zhibo(unittest.TestCase):
