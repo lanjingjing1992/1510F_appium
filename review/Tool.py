@@ -1,5 +1,5 @@
 from appium import webdriver
-import unittest
+from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as  EC
 from selenium.webdriver.support.ui import WebDriverWait
@@ -13,6 +13,8 @@ class BaseTestManager:
         qiezi['appPackage'] = package
         qiezi['appActivity'] = activity
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', qiezi)
+    def getElementByLocate(self):
+        action=TouchAction()
 
 
 
@@ -31,6 +33,11 @@ class BaseTestManager:
 
     def Mydriver(self):
         return self.driver
+
+    def getElementByClass(self,className):
+        CLASS = (By.CLASS_NAME, className)
+        WebDriverWait(self.driver, 30, 0.1).until(EC.presence_of_all_elements_located(CLASS))
+        return self.driver.find_elements_by_class_name(className)
 
 
 

@@ -194,9 +194,9 @@ function showOutput(id, name) {
 
 <div class='page-header'>
 <h1>兰京京</h1>
-<p class='attribute'><strong>开始时间:</strong> 2017-12-07 10:54:22</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:19.155781</p>
-<p class='attribute'><strong>状态:</strong> 失败 1</p>
+<p class='attribute'><strong>开始时间:</strong> 2017-12-07 15:11:48</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:51.800965</p>
+<p class='attribute'><strong>状态:</strong> 错误 1</p>
 
 </div>
 <p class='description'>这是我的测试报告1510F</p>
@@ -227,22 +227,22 @@ function showOutput(id, name) {
     <td>查看</td>
 </tr>
 
-<tr class='failClass'>
+<tr class='errorClass'>
     <td>Zhibo</td>
     <td>1</td>
     <td>0</td>
-    <td>1</td>
     <td>0</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
 </tr>
 
 <tr id='ft1.1' class='none'>
-    <td class='failCase'><div class='testcase'>testE_setting: 检查设置模块</div></td>
+    <td class='errorCase'><div class='testcase'>testF_Login: 这是用来登陆的测试用例</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        失败</a>
+        错误</a>
 
     <div id='div_ft1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
@@ -252,18 +252,30 @@ function showOutput(id, name) {
         <pre>
         
 ft1.1: Traceback (most recent call last):
-  File "/Users/lanjingjing/Desktop/1510F_appium/review/Case.py", line 83, in testE_setting
-    self.assertEqual('1.0',str_version)
-AssertionError: '1.0' != '关于'
-- 1.0
-+ 关于
+  File "/Users/lanjingjing/Desktop/1510F_appium/review/Case.py", line 62, in testF_Login
+    self.server.Login()
+  File "/Users/lanjingjing/Desktop/1510F_appium/review/Businness.py", line 10, in Login
+    self.action.enterPw('//android.widget.EditText[@text=\"输入用户名/手机号\"]/following-sibling::android.widget.EditText','123456123456')
+  File "/Users/lanjingjing/Desktop/1510F_appium/review/UI.py", line 11, in enterPw
+    self.baseFind.FindByXpath(locate).send_keys(pw)
+  File "/Users/lanjingjing/Desktop/1510F_appium/review/Tool.py", line 29, in FindByXpath
+    WebDriverWait(self.driver,30,0.1).until(EC.presence_of_all_elements_located(PATH))
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
 
 Traceback (most recent call last):
-  File "/Users/lanjingjing/Desktop/1510F_appium/review/Case.py", line 83, in testE_setting
-    self.assertEqual('1.0',str_version)
-AssertionError: '1.0' != '关于'
-- 1.0
-+ 关于
+  File "/Users/lanjingjing/Desktop/1510F_appium/review/Case.py", line 62, in testF_Login
+    self.server.Login()
+  File "/Users/lanjingjing/Desktop/1510F_appium/review/Businness.py", line 10, in Login
+    self.action.enterPw('//android.widget.EditText[@text=\"输入用户名/手机号\"]/following-sibling::android.widget.EditText','123456123456')
+  File "/Users/lanjingjing/Desktop/1510F_appium/review/UI.py", line 11, in enterPw
+    self.baseFind.FindByXpath(locate).send_keys(pw)
+  File "/Users/lanjingjing/Desktop/1510F_appium/review/Tool.py", line 29, in FindByXpath
+    WebDriverWait(self.driver,30,0.1).until(EC.presence_of_all_elements_located(PATH))
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
 
 
 
@@ -278,8 +290,8 @@ AssertionError: '1.0' != '关于'
     <td>总计</td>
     <td>1</td>
     <td>0</td>
-    <td>1</td>
     <td>0</td>
+    <td>1</td>
     <td>&nbsp;</td>
 </tr>
 </table>

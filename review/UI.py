@@ -6,9 +6,9 @@ class loginUIAction:
         self.baseFind=BaseTestManager(activity,package)
     def enterName(self,locate,name):
         '''输入用户名'''
-        self.baseFind.FindById(locate).send_keys(name)
+        self.baseFind.FindByXpath(locate).send_keys(name)
     def enterPw(self,locate,pw):
-        self.baseFind.FindById(locate).send_keys(pw)
+        self.baseFind.getElementByClass(locate)[1].send_keys(pw)
 
     def clickBtn(self,locate,kind):
         if kind=='xpath':
