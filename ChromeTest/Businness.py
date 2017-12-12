@@ -4,14 +4,17 @@ class businessAction:
     def __init__(self,activity,package):
         self.action=loginUIAction(activity,package)
 
-    def Search(self):
-        '''通过百度搜索框搜索  八维'''
-        self.action.SearchBawei('index-kw','appium')
-        self.action.ClickSearchBtn('index-bn')
+
+    def inpustURL(self):
+        '''输入网址'''
+        '''点击网址框'''
+        self.action.Click('com.android.chrome:id/ntp_content')
+        self.action.InputUrl('com.android.chrome:id/url_bar','http://www.baidu.com')
+    def inputAppium(self):
+        '''在百度的搜索栏输入appium 并且点击搜索'''
+        self.action.InputToBaidu('index-kw','appium')
+        self.action.Click('index-bn')
     def BackToGoole(self):
         self.action.tearDown()
 
-    def inputURL(self):
-        self.action.ClickSearchBtn('com.android.chrome:id/search_box_text')
 
-        self.action.inputURL('com.android.chrome:id/url_bar','http://www.baidu.com')
